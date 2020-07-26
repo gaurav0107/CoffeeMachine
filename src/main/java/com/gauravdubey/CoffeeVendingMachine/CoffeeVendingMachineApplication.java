@@ -35,7 +35,6 @@ public class CoffeeVendingMachineApplication implements CommandLineRunner {
 		CoffeeMachine coffeeMachine = new CoffeeMachineImpl(machineConfig);
 		coffeeMachine.startMachine();
 		BeverageFactory beverageFactory = new BeverageFactoryImpl();
-
 		orderList.forEach((beverageType, ingredientsIntegerMap) -> {
 			try {
 				coffeeMachine.prepareBeverage(beverageFactory.createBeverage(beverageType, ingredientsIntegerMap));
@@ -44,5 +43,12 @@ public class CoffeeVendingMachineApplication implements CommandLineRunner {
 			}
 		});
 		coffeeMachine.stopMachine();
+
+
+		//Method to check status
+		coffeeMachine.getIngredients();
+
+		//Method to Refill
+		coffeeMachine.refillIngredients(machineConfig.getIngredientsQuantity());
 	}
 }

@@ -31,7 +31,8 @@ public abstract class CoffeeMachine {
                     preparingBeverage(beverage);
                     resultMessage =  beverage.getClass().getSimpleName() + " is prepared";
                 }catch (IngredientsNotAvailableException| InsufficientIngredientsException ex){
-                    resultMessage = beverage.getClass().getSimpleName() + " cannot be prepared because" + ex.getMessage();
+                    resultMessage = beverage.getClass().getSimpleName() + " cannot be prepared because " +
+                            "" + ex.getMessage();
                 }
                 System.out.println(resultMessage);
             }
@@ -81,6 +82,9 @@ public abstract class CoffeeMachine {
     }
 
     public void refillIngredients(Map<Ingredients, Integer> ingredientsMap){
+        ingredientsMap.forEach(((ingredients, value) -> {
+            getIngredients().put(ingredients, getIngredients().get(ingredients) + value);
+        }));
         System.out.println(getIngredients());
     }
 }
