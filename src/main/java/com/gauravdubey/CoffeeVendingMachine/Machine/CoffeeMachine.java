@@ -31,7 +31,7 @@ public abstract class CoffeeMachine {
                     preparingBeverage(beverage);
                     resultMessage =  beverage.getClass().getSimpleName() + " is prepared";
                 }catch (IngredientsNotAvailableException| InsufficientIngredientsException ex){
-                    resultMessage = ex.getMessage();
+                    resultMessage = beverage.getClass().getSimpleName() + " cannot be prepared because" + ex.getMessage();
                 }
                 System.out.println(resultMessage);
             }
