@@ -55,9 +55,17 @@ hot_water, hot_milk, ginger_syrup, sugar_syrup, tea_leaves_syrup, green_mixture,
         "hot_water": 100,
         "green_mixture": 30
       },
+      "elaichi_tea": {
+        "hot_water": 200,
+        "hot_milk": 100,
+        "elaichi_syrup": 10,
+        "sugar_syrup": 10,
+        "tea_leaves_syrup": 30
+      }
     }
   }
 }
+
 
 ```
 
