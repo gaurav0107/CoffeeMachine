@@ -5,4 +5,5 @@ import java.util.Map;
 
 public interface Beverage {
     Map<Ingredients, Integer> getIngredients();
+    void prepare();
 }

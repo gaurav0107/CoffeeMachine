@@ -39,12 +39,14 @@ public abstract class CoffeeMachine {
     }
 
     public Beverage preparingBeverage(Beverage beverage) throws IngredientsNotAvailableException, InsufficientIngredientsException{
-        updateIngredients(beverage);
+        // Adding Sudo Delay to create a time lag of creation.
         try {
             TimeUnit.MILLISECONDS.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        updateIngredients(beverage);
+        beverage.prepare();
         return beverage;
     }
 

@@ -17,4 +17,9 @@ public class HotWater implements Beverage {
     public Map<Ingredients, Integer> getIngredients() {
         return requiredIngredients;
     }
+
+    @Override
+    public void prepare() {
+        System.out.println("Preparing :" + this.getClass().getSimpleName());
+    }
 }

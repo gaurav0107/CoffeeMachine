@@ -25,7 +25,10 @@ public class CoffeeVendingMachineApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Starting Application");
-		String fileName = args[0];
+		String fileName = "input.json";
+		if(args.length > 0){
+			fileName = args[0];
+		}
 		ConfigParser configParser =  new ConfigParser();
 		MachineConfig machineConfig = configParser.getMachineConfig(fileName);
 		Map<BeverageType, Map<Ingredients, Integer>> orderList = configParser.getOrderList(fileName);

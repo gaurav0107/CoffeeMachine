@@ -16,4 +16,9 @@ public class BlackTea implements Beverage {
     public Map<Ingredients, Integer> getIngredients() {
         return this.requiredIngredients;
     }
+
+    @Override
+    public void prepare() {
+        System.out.println("Preparing :" + this.getClass().getSimpleName());
+    }
 }
