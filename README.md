@@ -60,3 +60,7 @@ hot_water, hot_milk, ginger_syrup, sugar_syrup, tea_leaves_syrup, green_mixture,
 }
 
 ```
+
+### Run Pre Compiled Jar
+
+```java -jar jar/CoffeeVendingMachine-0.0.1-SNAPSHOT.jar input.json```
